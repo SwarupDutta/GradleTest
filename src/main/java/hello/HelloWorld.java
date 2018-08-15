@@ -2,7 +2,7 @@ package hello;
 //import org.joda.time.LocalTime;
 import java.util.Date;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory
+import org.slf4j.LoggerFactory;
 
 public class HelloWorld {
     private static final Logger logger = LoggerFactory.getLogger(HelloWorld.class);
