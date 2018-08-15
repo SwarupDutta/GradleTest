@@ -28,3 +28,24 @@ task fatJar(type: Jar) {
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
+
+task myTask {
+    ext.myCustomMethod= { term->
+         int n1=0
+         int n2=1
+         int n3=0
+        print n1 + " "+n2 + " "
+        for( int i=2;i<=term;i++)
+        {
+            n3=n1+n2
+            n1=n2
+            n2=n3
+            print n3 + " "
+
+        }
+    }
+
+    doLast {
+        myCustomMethod(5) // call to 'myCustomMethod'
+    }
+}
