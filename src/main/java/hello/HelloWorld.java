@@ -15,7 +15,7 @@ public class HelloWorld {
        // Greeter greeter = new Greeter();
         //System.out.println(greeter.sayHello());
         logger.debug("[MAIN] Current Date : {}", getCurrentDate());
-        System.out.println(getCurrentDate());
+        System.out.println("Method name is"+new Exception().getStackTrace()[0].getMethodName()+":"+getCurrentDate());
     }
     private static Date getCurrentDate(){
         return new Date();
