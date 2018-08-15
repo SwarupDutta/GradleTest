@@ -49,3 +49,14 @@ task myTask {
         myCustomMethod(5) // call to 'myCustomMethod'
     }
 }
+
+
+
+task runApp(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    main = 'hello.HelloWorld'
+
+    // arguments to pass to the application
+    args 'appArg1'
+}
